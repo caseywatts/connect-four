@@ -1,4 +1,5 @@
 $page-background: rgb(122, 183, 215);
+$grid-spacing: 20px;
 
 body {
   background: $page-background;
@@ -8,6 +9,7 @@ body {
   margin: 0px;
   padding: 0px;
   color: white;
+  box-sizing: border-box;
 }
 
 
@@ -15,37 +17,60 @@ h1 {
   text-align: center;
 }
 
-.button {
+@mixin boxy {
   padding: 10px;
-  margin: 10px;
-  background:none;
+  // margin: 10px;
   color: white;
   border: 2px solid white;
   border-radius:6px;
+  background: none;
+  font-size: 1em;
+}
+
+label {
+  font-size: 1em;
+}
+
+input {
+  @include boxy;
+  // display: block;
+  width: 100%;
+}
+
+.button{
+  @include boxy;
   text-align: center;
 }
 
 .button-green:hover {
-  border: 3px solid green;
+  border: 2px solid green;
 }
 
 .button-yellow:hover {
-  border: 3px solid yellow;
+  border: 2px solid yellow;
 }
 
 .button-red:hover {
-  border: 3px solid red;
+  border: 2px solid red;
 }
 
 
+.content {
+  padding: 15px;
+}
 
 .row {
-
+  padding-top: $grid-spacing;
+  clear:both;
 }
 
 [class*='col-'] {
   float: left;
   display: inline-block;
+  padding-right: $grid-spacing;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0px;
 }
 
 .col-1-2 {

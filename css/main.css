@@ -4,32 +4,56 @@ body {
 * {
   margin: 0px;
   padding: 0px;
-  color: white; }
+  color: white;
+  box-sizing: border-box; }
 
 h1 {
   text-align: center; }
 
-.button {
+label {
+  font-size: 1em; }
+
+input {
   padding: 10px;
-  margin: 10px;
-  background: none;
   color: white;
   border: 2px solid white;
   border-radius: 6px;
+  background: none;
+  font-size: 1em;
+  width: 100%; }
+
+.button {
+  padding: 10px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 6px;
+  background: none;
+  font-size: 1em;
   text-align: center; }
 
 .button-green:hover {
-  border: 3px solid green; }
+  border: 2px solid green; }
 
 .button-yellow:hover {
-  border: 3px solid yellow; }
+  border: 2px solid yellow; }
 
 .button-red:hover {
-  border: 3px solid red; }
+  border: 2px solid red; }
+
+.content {
+  padding: 15px; }
+
+.row {
+  padding-top: 20px;
+  clear: both; }
 
 [class*='col-'] {
   float: left;
-  display: inline-block; }
+  display: inline-block;
+  padding-right: 20px; }
+
+[class*='col-']:last-of-type {
+  padding-right: 0px; }
 
 .col-1-2 {
   width: 50%; }
