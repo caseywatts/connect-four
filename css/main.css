@@ -1,5 +1,7 @@
 .content {
-  padding: 15px; }
+  padding: 15px;
+  max-width: 1000px;
+  margin: auto; }
 
 .row {
   padding-top: 50px;
