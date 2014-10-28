@@ -1,31 +1,59 @@
-$grid-spacing: 20px;
+$grid-gutter: 40px;
+$row-spacing: 50px;
+
+@mixin size-class($size-class) {
+  
+  $size-class-phone: "(max-width: 520px)";
+  $size-class-tablet: "(max-width: 720px)";
+
+  @if $size-class == phone {
+    @media #{$size-class-phone} { @content; }
+  }
+  @else if $size-class == tablet {
+    @media #{$size-class-tablet} { @content; }
+  }
+
+}
+
 
 .content {
   padding: 15px;
 }
 
 .row {
-  padding-top: $grid-spacing;
+  padding-top: $row-spacing;
   clear:both;
+  padding-right: -20px;
 }
 
 [class*='col-'] {
   float: left;
   display: inline-block;
-  padding-right: $grid-spacing;
-}
-[class*='col-']:last-of-type {
-  padding-right: 0px;
+  padding-right: $grid-gutter;
 }
 
 .col-1-2 {
-  width: 50%
+  width: 50%;
 }
 
 .col-1-3 {
-  width: 33.33%
+  width: 33.33%;
 }
 
 .col-2-3 {
-  width: 66.66%
+  width: 66.66%;
+}
+
+@include size-class(tablet) {
+  [class*='col-'] {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+@include size-class(phone) {
+  [class*='col-'] {
+    width: 100%;
+    margin-bottom: 8px;
+  }
 }
