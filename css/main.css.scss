@@ -1,6 +1,61 @@
 $page-background: rgb(122, 183, 215);
 
-
 body {
   background: $page-background;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+.button {
+  padding: 10px;
+  margin: 10px;
+  background:none;
+  color: white;
+  border: 2px solid white;
+  border-radius:6px;
+  text-align: center;
+}
+
+.button-green:hover {
+  border: 3px solid green;
+}
+
+.button-yellow:hover {
+  border: 3px solid yellow;
+}
+
+.button-red:hover {
+  border: 3px solid red;
+}
+
+
+
+.row {
+
+}
+
+[class*='col-'] {
+  float: left;
+  display: inline-block;
+}
+
+.col-1-2 {
+  width: 50%
+}
+
+.col-1-3 {
+  width: 33.33%
+}
+
+.col-2-3 {
+  width: 66.66%
 }
